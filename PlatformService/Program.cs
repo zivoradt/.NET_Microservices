@@ -1,12 +1,16 @@
 using Microsoft.EntityFrameworkCore;
 using PlatformService.Data;
 using PlatformService.Services;
+using System.Runtime.CompilerServices;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Environment and configuration before build
+IWebHostEnvironment env = builder.Environment;
+IConfiguration config = builder.Configuration;
 
-builder.Services.ConfigureServices();
+// Add services to the container.
+builder.Services.ConfigureServices(env, config);
 
 WebApplication app = builder.Build();
 
@@ -17,7 +21,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-PrepDB.PrepPopulation(app);
+PrepDB.PrepPopulation(app, env.IsProduction());
 
 app.UseHttpsRedirection();
 

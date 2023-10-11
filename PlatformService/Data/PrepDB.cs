@@ -1,12 +1,26 @@
-﻿using PlatformService.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using PlatformService.Models;
 
 namespace PlatformService.Data
 {
     // Prepare DB for migrations
     public static class PrepDB
     {
-        private static void SeedData(AppDBContext dbContext)
+        private static void SeedData(AppDBContext dbContext, bool isProd)
         {
+            if (isProd)
+            {
+                Console.WriteLine("--> Attemptiing to apply migrations...");
+                try
+                {
+                    dbContext.Database.Migrate();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"--> Could not run migration: {ex.Message}");
+                }
+            }
+
             if (!dbContext.Platform.Any())
             {
                 Console.WriteLine("--> Seeding data!");
@@ -26,11 +40,11 @@ namespace PlatformService.Data
             }
         }
 
-        public static void PrepPopulation(IApplicationBuilder app)
+        public static void PrepPopulation(IApplicationBuilder app, bool isProd)
         {
             using (var serviceScope = app.ApplicationServices.CreateScope())
             {
-                SeedData(serviceScope.ServiceProvider.GetService<AppDBContext>());
+                SeedData(serviceScope.ServiceProvider.GetService<AppDBContext>(), isProd);
             }
         }
     }
