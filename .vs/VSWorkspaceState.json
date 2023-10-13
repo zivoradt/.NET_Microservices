@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    "\\K8S"
+    "",
+    "\\K8S",
+    "\\PlatformService\\Services"
   ],
+  "SelectedNode": "\\K8S\\mssql-plat-depl.yaml",
   "PreviewInSolutionExplorer": false
 }

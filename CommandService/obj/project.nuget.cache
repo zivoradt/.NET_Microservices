@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "x+jOc6VMrtFpNNfK6cZldTVDtcCUeUEHvHEOi+GU4wWHj8hNRLArQtGbQIFMvn1cXUrSpjuZ33I9MkloRgnhlQ==",
+  "dgSpecHash": "K0quhjugswFERZk6fgAdsrxbrysnSvy293DWGJmIot5hljBZgywN1aKz3ptq12BAjNYXgSWkkzJCPAjqrVlckQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\zivor\\Desktop\\C#\\practice\\E3\\CommandService\\CommandService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\zivor\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\zivor\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\zivor\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.9\\microsoft.aspnet.webapi.client.5.2.9.nupkg.sha512",
     "C:\\Users\\zivor\\.nuget\\packages\\microsoft.aspnet.webapi.core\\5.2.9\\microsoft.aspnet.webapi.core.5.2.9.nupkg.sha512",
     "C:\\Users\\zivor\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
