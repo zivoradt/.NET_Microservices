@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using PlatformService.AsyncDataService;
 using PlatformService.Data;
 using PlatformService.Services;
 using PlatformService.SyncDataServices.Http;
@@ -27,6 +28,8 @@ namespace PlatformService.Services
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
             services.AddHttpClient<ICommandDataClient, HttoCommandDataClient>();
+
+            services.AddSingleton<IMessageBusClient, MessageBusClient>();
 
             services.AddScoped<IPlatformRepo, PlatformRepo>();
 

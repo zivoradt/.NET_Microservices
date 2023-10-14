@@ -13,6 +13,8 @@ namespace CommandService.Data
 
         bool PlatformExist(int platformId);
 
+        bool ExternalPlatgormExists(int externalPlatformId);
+
         // Commands
 
         IEnumerable<Command> GetCommandsForPlatform(int platformID);
