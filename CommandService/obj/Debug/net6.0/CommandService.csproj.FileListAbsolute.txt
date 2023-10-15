@@ -95,3 +95,6 @@ C:\Users\zivor\Desktop\C#\practice\E3\CommandService\obj\Debug\net6.0\CommandSer
 C:\Users\zivor\Desktop\C#\practice\E3\CommandService\obj\Debug\net6.0\CommandService.genruntimeconfig.cache
 C:\Users\zivor\Desktop\C#\practice\E3\CommandService\obj\Debug\net6.0\ref\CommandService.dll
 C:\Users\zivor\Desktop\C#\practice\E3\CommandService\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\zivor\Desktop\C#\practice\E3\CommandService\bin\Debug\net6.0\appsettings.Production.json
+C:\Users\zivor\Desktop\C#\practice\E3\CommandService\bin\Debug\net6.0\RabbitMQ.Client.dll
+C:\Users\zivor\Desktop\C#\practice\E3\CommandService\bin\Debug\net6.0\System.Threading.Channels.dll

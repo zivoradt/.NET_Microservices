@@ -35,7 +35,7 @@ namespace CommandService.Controllers
         }
 
         [HttpGet("{commandId}", Name = "GetCommandForPlatform")]
-        public ActionResult<CommandReadDto> GetCommandForPlatfom(int platformId, int commandId)
+        public ActionResult<CommandReadDto> GetCommandForPlatform(int platformId, int commandId)
         {
             Console.WriteLine($"--> Hit GetCommandForPlatfom: {platformId} / {commandId}");
 
@@ -55,7 +55,7 @@ namespace CommandService.Controllers
         }
 
         [HttpPost]
-        public ActionResult<CommandReadDto> CreateCommandForPlatform(int platformId, CommandCreateDto commandDto)
+        public ActionResult<CommandReadDto> CreateCommandForPlatform(int platformId, [FromBody] CommandCreateDto commandDto)
         {
             Console.WriteLine($"--> Hit CreateCommandForPlatform: {platformId}");
 
@@ -70,8 +70,7 @@ namespace CommandService.Controllers
 
             CommandReadDto commandReadDto = _mapper.Map<CommandReadDto>(command);
 
-            return CreatedAtRoute(nameof(GetCommandForPlatfom),
-                new { platformId = platformId, commnadId = commandReadDto.Id }, commandReadDto);
+            return CreatedAtRoute(nameof(GetCommandForPlatform), new { platformId = platformId, commandId = commandReadDto.Id }, commandReadDto);
         }
     }
 }
